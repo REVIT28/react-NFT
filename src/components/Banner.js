@@ -17,6 +17,18 @@ const Title = styled.h1`
   width: 35%;
   text-transform: capitalize;
   text-shadow: 1px 1px 2px ${(props) => props.theme.text};
+
+  @media (max-width: 64em) {
+    font-size: ${(props) => props.theme.fontxxl};
+
+    text-align: center;
+    width: 40%;
+  }
+  @media (max-width: 48em) {
+    font-size: ${(props) => props.theme.fontxl};
+    padding: 2rem 0;
+    width: 100%;
+  }
 `;
 
 const JoiNow = styled.button`
@@ -53,6 +65,14 @@ const JoiNow = styled.button`
     transform: translate(-50%, -50%) scale(1.2);
     padding: 0.3rem;
   } */
+
+  @media (max-width: 48em) {
+    padding: 1rem 2rem;
+  }
+  @media (max-width: 30em) {
+    padding: 0.5rem 2rem;
+    font-size: ${(props) => props.theme.fontsm};
+  }
 `;
 
 const Section = styled.section`
@@ -68,6 +88,11 @@ const Section = styled.section`
   border-top: 2px solid ${(props) => props.theme.text};
   border-top: 2px solid ${(props) => props.theme.text};
   overflow: hidden;
+
+  @media (max-width: 64em) {
+    height: 15rem;
+    flex-direction: column;
+  }
 `;
 
 const ImgContainer = styled.div`
@@ -86,6 +111,13 @@ const ImgContainer = styled.div`
     width: 15rem;
     height: auto;
   }
+
+  @media (max-width: 48em) {
+    img {
+      height: 10rem;
+      height: auto;
+    }
+  }
 `;
 
 const BtnContainer = styled.div`
@@ -93,6 +125,12 @@ const BtnContainer = styled.div`
   display: flex;
   justify-content: flex-end;
   width: 35%;
+
+  @media (max-width: 48em) {
+    justify-content: center;
+    margin-bottom: 40px;
+    width: 100%;
+  }
 `;
 
 const Banner = () => {

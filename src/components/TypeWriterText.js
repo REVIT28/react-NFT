@@ -15,6 +15,15 @@ const Title = styled.h2`
     text-transform: uppercase;
     font-family: 'Akaya Telivigala', cursive;
   }
+
+  @media (max-width: 48em) {
+    width: 100%;
+    align-self: center;
+    text-align: center;
+  }
+  @media (max-width: 70em) {
+    font-size: 28px;
+  }
 `;
 
 const SubTite = styled.h3`
@@ -25,12 +34,30 @@ const SubTite = styled.h3`
   width: 80%;
   color: gray;
   font-weight: 600;
+
+  @media (max-width: 40em) {
+    width: 100%;
+    font-size: ${(props) => props.theme.fontmd};
+  }
+  @media (max-width: 48em) {
+    align-self: center;
+    text-align: center;
+  }
 `;
 
 const ButtonContainer = styled.div`
   width: 80%;
-
   align-self: flex-start;
+
+  @media (max-width: 48em) {
+    width: 100%;
+    align-self: center;
+    text-align: center;
+
+    button {
+      margin: 0 auto;
+    }
+  }
 `;
 
 const TypeWriterText = () => {

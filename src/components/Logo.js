@@ -12,6 +12,10 @@ const LogoText = styled.h1`
     transform: scale(1.1);
     cursor: pointer;
   }
+
+  @media (max-width: 64em) {
+    font-size: ${(props) => props.theme.fontxxl};
+  }
 `;
 
 const Logo = () => {

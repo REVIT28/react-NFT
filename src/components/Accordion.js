@@ -13,7 +13,12 @@ const Container = styled.div`
 
   display: flex;
   border-bottom: 1px solid ${(props) => props.theme.carouselColor};
+
+  @media (max-width: 64em) {
+    margin: 2rem 0;
+  }
 `;
+
 const Title = styled.div`
   font-size: ${(props) => props.theme.fontsm};
 
@@ -50,6 +55,10 @@ const Indicator = styled.div`
     &:active {
       transform: animation;
     }
+  }
+
+  @media (max-width: 64em) {
+    font-size: ${(props) => props.theme.fontxl};
   }
 `;
 

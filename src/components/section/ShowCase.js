@@ -25,6 +25,22 @@ const Section = styled.section`
   justify-content: center;
   align-items: center;
   position: relative;
+
+  & > *:first-child {
+    animation-duration: 20s;
+
+    @media (max-width: 30em) {
+      animation-duration: 15s;
+    }
+  }
+
+  & > *:last-child {
+    animation-duration: 15s;
+
+    @media (max-width: 30em) {
+      animation-duration: 10s;
+    }
+  }
 `;
 
 const move = keyframes`
@@ -56,6 +72,14 @@ const ImgContainer = styled.div`
     width: 100%;
     height: auto;
   }
+
+  @media (max-width: 48em) {
+    width: 12rem;
+  }
+
+  @media (max-width: 30em) {
+    width: 10rem;
+  }
 `;
 
 const Details = styled.div`
@@ -76,6 +100,10 @@ const Details = styled.div`
   h1 {
     font-size: 16px;
     margin: 4px 0;
+
+    @media (max-width: 30em) {
+      font-size: 10px;
+    }
   }
 `;
 

@@ -26,10 +26,29 @@ const Container = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media (max-width: 64em) {
+    width: 80%;
+  }
+  @media (max-width: 48em) {
+    width: 90%;
+    flex-direction: column;
+
+    & > *:last-child {
+      & > *:first-child {
+        margin-top: 0;
+      }
+    }
+  }
 `;
 
 const Box = styled.div`
   width: 45%;
+
+  @media (max-width: 64em) {
+    width: 90%;
+    align-items: center;
+  }
 `;
 
 const Title = styled.h2`
